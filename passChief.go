@@ -201,7 +201,6 @@ func add_user(user string, pass string, path string) int{
 
 	//Create an user, create his file, put the chain in and crypt with the hashed password
 	fileHandle, _ := os.Create(path+"/"+user+".txt")
-		fmt.Print("Georges ?", fileHandle)
 	fileHandle.Close()
 	h := md5.New()
 	io.WriteString(h, pass)
