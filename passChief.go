@@ -191,8 +191,6 @@ func valideacc(user string, path string) bool{
 	if _, err := os.Stat(path+user+".txt"); err == nil {
 		return true
 	}else {
-							fmt.Print("old path :",path)
-							fmt.Print(err)
 		return false
 	}
 }
